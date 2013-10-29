@@ -28,6 +28,7 @@
 		93BFB234181F5E710017F469 /* Power up.wav in Resources */ = {isa = PBXBuildFile; fileRef = 93BFB22F181F5E710017F469 /* Power up.wav */; };
 		93BFB235181F5E710017F469 /* Stage clear.wav in Resources */ = {isa = PBXBuildFile; fileRef = 93BFB230181F5E710017F469 /* Stage clear.wav */; };
 		93BFB238181F60D10017F469 /* SDBDSoundPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 93BFB237181F60D10017F469 /* SDBDSoundPlayer.m */; };
+		93BFB23B181F66010017F469 /* SDBDSoundAggregator.m in Sources */ = {isa = PBXBuildFile; fileRef = 93BFB23A181F66010017F469 /* SDBDSoundAggregator.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +71,8 @@
 		93BFB230181F5E710017F469 /* Stage clear.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "Stage clear.wav"; sourceTree = "<group>"; };
 		93BFB236181F60D10017F469 /* SDBDSoundPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDBDSoundPlayer.h; sourceTree = "<group>"; };
 		93BFB237181F60D10017F469 /* SDBDSoundPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDBDSoundPlayer.m; sourceTree = "<group>"; };
+		93BFB239181F66010017F469 /* SDBDSoundAggregator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDBDSoundAggregator.h; sourceTree = "<group>"; };
+		93BFB23A181F66010017F469 /* SDBDSoundAggregator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDBDSoundAggregator.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +138,8 @@
 				93BFB218181F514F0017F469 /* SDBDCollectionViewController.m */,
 				93BFB21D181F535E0017F469 /* SDBDSound.h */,
 				93BFB21E181F535E0017F469 /* SDBDSound.m */,
+				93BFB239181F66010017F469 /* SDBDSoundAggregator.h */,
+				93BFB23A181F66010017F469 /* SDBDSoundAggregator.m */,
 				93BFB21A181F53450017F469 /* SDBDSoundCell.h */,
 				93BFB21B181F53450017F469 /* SDBDSoundCell.m */,
 				93BFB236181F60D10017F469 /* SDBDSoundPlayer.h */,
@@ -291,6 +296,7 @@
 				93BFB21C181F53460017F469 /* SDBDSoundCell.m in Sources */,
 				93BFB1F5181F512E0017F469 /* main.m in Sources */,
 				93BFB219181F514F0017F469 /* SDBDCollectionViewController.m in Sources */,
+				93BFB23B181F66010017F469 /* SDBDSoundAggregator.m in Sources */,
 				93BFB21F181F535E0017F469 /* SDBDSound.m in Sources */,
 				93BFB1F9181F512E0017F469 /* SDBDAppDelegate.m in Sources */,
 				93BFB238181F60D10017F469 /* SDBDSoundPlayer.m in Sources */,

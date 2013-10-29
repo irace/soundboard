@@ -11,21 +11,19 @@
 @interface SDBDSound()
 
 @property (copy) NSString *filePath;
+@property (copy) NSString *name;
 
 @end
 
 @implementation SDBDSound
 
-- (instancetype)initWithFilePath:(NSString *)filePath {
+- (instancetype)initWithFilePath:(NSString *)filePath name:(NSString *)name {
     if (self = [super init]) {
         self.filePath = filePath;
+        self.name = name;
     }
     
     return self;
-}
-
-- (NSString *)name {
-    return [[self.filePath componentsSeparatedByString:@"."] firstObject];
 }
 
 @end

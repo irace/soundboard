@@ -9,8 +9,8 @@
 @interface SDBDSound : NSObject
 
 @property (copy, readonly) NSString *filePath;
-@property (readonly) NSString *name;
+@property (copy, readonly) NSString *name;
 
-- (instancetype)initWithFilePath:(NSString *)filePath;
+- (instancetype)initWithFilePath:(NSString *)filePath name:(NSString *)name;
 
 @end

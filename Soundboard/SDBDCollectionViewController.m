@@ -8,11 +8,11 @@
 
 #import "SDBDCollectionViewController.h"
 #import "SDBDSound.h"
+#import "SDBDSoundAggregator.h"
 #import "SDBDSoundCell.h"
 #import "SDBDSoundPlayer.h"
 
 static NSString * const SDBDSoundCellIdentifier = @"SDBDSoundCellIdentifier";
-
 
 @interface SDBDCollectionViewController ()
 
@@ -22,29 +22,15 @@ static NSString * const SDBDSoundCellIdentifier = @"SDBDSoundCellIdentifier";
 
 @implementation SDBDCollectionViewController
 
+#pragma mark - NSObject
+
 - (id)init {
     UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc] init];
     layout.minimumLineSpacing = 15;
     layout.itemSize = CGSizeMake(100, 100);
     
     if (self = [super initWithCollectionViewLayout:layout]) {
-        NSError *error = nil;
-        NSArray *directoryContents = [[NSFileManager defaultManager] contentsOfDirectoryAtPath:[[NSBundle mainBundle] resourcePath]
-                                                                                         error:&error];
-        
-        if (error) {
-            NSLog(@"Error reading contents of directory: %@ %@", error, [error userInfo]);
-        }
-        
-        NSMutableArray *sounds = [[NSMutableArray alloc] init];
-        
-        [directoryContents enumerateObjectsUsingBlock:^(NSString *filePath, NSUInteger index, BOOL *stop) {
-            if ([filePath hasSuffix:@".wav"]) {
-                [sounds addObject:[[SDBDSound alloc] initWithFilePath:filePath]];
-            }
-        }];
-        
-        self.sounds = sounds;
+        self.sounds = [SDBDSoundAggregator soundsInBundle:[NSBundle mainBundle]];
     }
     
     return self;
@@ -66,19 +52,12 @@ static NSString * const SDBDSoundCellIdentifier = @"SDBDSoundCellIdentifier";
     [self.collectionView registerClass:[SDBDSoundCell class] forCellWithReuseIdentifier:SDBDSoundCellIdentifier];
 }
 
-- (UIStatusBarStyle)preferredStatusBarStyle {
-#warning - Figure out how to do this in Info.plist
-    return UIStatusBarStyleLightContent;
-}
-
 #pragma mark - UICollectionViewDelegate
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
     SDBDSound *sound = self.sounds[indexPath.row];
-    NSArray *filePathComponents = [sound.filePath componentsSeparatedByString:@"."];
     
-    [SDBDSoundPlayer playSound:[[NSBundle mainBundle] pathForResource:[filePathComponents firstObject]
-                                                               ofType:[filePathComponents lastObject]]];
+    [SDBDSoundPlayer playSound:sound.filePath];
 }
 
 #pragma mark - UICollectionViewDataSource
