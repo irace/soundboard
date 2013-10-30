@@ -8,6 +8,10 @@
 
 @interface SDBDSoundPlayer : NSObject
 
-+ (void)playSound:(NSString *)filePath;
+@property (nonatomic) BOOL playsSoundsConcurrently;
+
++ (instancetype)sharedInstance;
+
+- (void)playSound:(NSString *)filePath;
 
 @end

@@ -57,7 +57,7 @@ static NSString * const SDBDSoundCellIdentifier = @"SDBDSoundCellIdentifier";
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
     SDBDSound *sound = self.sounds[indexPath.row];
     
-    [SDBDSoundPlayer playSound:sound.filePath];
+    [[SDBDSoundPlayer sharedInstance] playSound:sound.filePath];
 }
 
 #pragma mark - UICollectionViewDataSource

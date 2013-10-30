@@ -10,7 +10,7 @@
 
 @interface SDBDSoundCell : UICollectionViewCell
 
-@property SDBDSound *sound;
+@property (nonatomic) SDBDSound *sound;
 
 - (instancetype)initWithFrame:(CGRect)frame;
 

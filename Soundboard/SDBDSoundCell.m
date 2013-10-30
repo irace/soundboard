@@ -8,13 +8,14 @@
 
 #import "SDBDSoundCell.h"
 
+static NSString * const SDBDSoundKeyPath = @"sound";
 static void * SDBDSoundCellKVOContext = &SDBDSoundCellKVOContext;
 static CGFloat SDBDDevicePixelHeight;
 
 
 @interface SDBDSoundCell()
 
-@property UILabel *label;
+@property (nonatomic) UILabel *label;
 
 @end
 
@@ -58,7 +59,7 @@ static CGFloat SDBDDevicePixelHeight;
         
         [self addConstraints:constraints];
         
-        [self addObserver:self forKeyPath:@"sound" options:0 context:SDBDSoundCellKVOContext];
+        [self addObserver:self forKeyPath:SDBDSoundKeyPath options:0 context:SDBDSoundCellKVOContext];
     }
     
     return self;
@@ -85,6 +86,12 @@ static CGFloat SDBDDevicePixelHeight;
     else {
         [super observeValueForKeyPath:keyPath ofObject:object change:change context:context];
     }
+}
+
+#pragma mark - NSObject
+
+- (void)dealloc {
+    [self removeObserver:self forKeyPath:SDBDSoundKeyPath context:SDBDSoundCellKVOContext];
 }
 
 @end

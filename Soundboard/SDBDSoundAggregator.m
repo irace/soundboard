@@ -19,11 +19,12 @@ static NSArray *SDBDSoundAggregatorSupportedFileTypes;
         SDBDSoundAggregatorSupportedFileTypes = @[@"wav", @"mp3", @"aif"];
     });
     
+    NSString *directoryPath = [bundle resourcePath];
     NSError *error = nil;
-    NSArray *directoryContents = [[NSFileManager defaultManager] contentsOfDirectoryAtPath:[bundle resourcePath] error:&error];
+    NSArray *directoryContents = [[NSFileManager defaultManager] contentsOfDirectoryAtPath:directoryPath error:&error];
     
     if (error) {
-        NSLog(@"Error reading contents of directory: %@ %@", error, [error userInfo]);
+        NSLog(@"Error reading contents of directory %@: %@ %@", directoryPath, error, [error userInfo]);
     }
     
     NSMutableArray *sounds = [[NSMutableArray alloc] init];
