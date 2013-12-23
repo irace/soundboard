@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		34FC3E86DBA5471D8706F2FE /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BB6212BA771479FBE60A0D3 /* libPods.a */; };
 		93BFB1E9181F512E0017F469 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93BFB1E8181F512E0017F469 /* Foundation.framework */; };
 		93BFB1EB181F512E0017F469 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93BFB1EA181F512E0017F469 /* CoreGraphics.framework */; };
 		93BFB1ED181F512E0017F469 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93BFB1EC181F512E0017F469 /* UIKit.framework */; };
@@ -14,34 +15,15 @@
 		93BFB1F5181F512E0017F469 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 93BFB1F4181F512E0017F469 /* main.m */; };
 		93BFB1F9181F512E0017F469 /* SDBDAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 93BFB1F8181F512E0017F469 /* SDBDAppDelegate.m */; };
 		93BFB1FB181F512E0017F469 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 93BFB1FA181F512E0017F469 /* Images.xcassets */; };
-		93BFB202181F512E0017F469 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93BFB201181F512E0017F469 /* XCTest.framework */; };
-		93BFB203181F512E0017F469 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93BFB1E8181F512E0017F469 /* Foundation.framework */; };
-		93BFB204181F512E0017F469 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93BFB1EC181F512E0017F469 /* UIKit.framework */; };
-		93BFB20C181F512E0017F469 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 93BFB20A181F512E0017F469 /* InfoPlist.strings */; };
-		93BFB20E181F512E0017F469 /* SoundboardTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 93BFB20D181F512E0017F469 /* SoundboardTests.m */; };
 		93BFB219181F514F0017F469 /* SDBDCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93BFB218181F514F0017F469 /* SDBDCollectionViewController.m */; };
 		93BFB21C181F53460017F469 /* SDBDSoundCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 93BFB21B181F53450017F469 /* SDBDSoundCell.m */; };
 		93BFB21F181F535E0017F469 /* SDBDSound.m in Sources */ = {isa = PBXBuildFile; fileRef = 93BFB21E181F535E0017F469 /* SDBDSound.m */; };
-		93BFB231181F5E710017F469 /* Coin.wav in Resources */ = {isa = PBXBuildFile; fileRef = 93BFB22C181F5E710017F469 /* Coin.wav */; };
-		93BFB232181F5E710017F469 /* Die.wav in Resources */ = {isa = PBXBuildFile; fileRef = 93BFB22D181F5E710017F469 /* Die.wav */; };
-		93BFB233181F5E710017F469 /* Pipe.wav in Resources */ = {isa = PBXBuildFile; fileRef = 93BFB22E181F5E710017F469 /* Pipe.wav */; };
-		93BFB234181F5E710017F469 /* Power up.wav in Resources */ = {isa = PBXBuildFile; fileRef = 93BFB22F181F5E710017F469 /* Power up.wav */; };
-		93BFB235181F5E710017F469 /* Stage clear.wav in Resources */ = {isa = PBXBuildFile; fileRef = 93BFB230181F5E710017F469 /* Stage clear.wav */; };
-		93BFB238181F60D10017F469 /* SDBDSoundPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 93BFB237181F60D10017F469 /* SDBDSoundPlayer.m */; };
-		93BFB23B181F66010017F469 /* SDBDSoundAggregator.m in Sources */ = {isa = PBXBuildFile; fileRef = 93BFB23A181F66010017F469 /* SDBDSoundAggregator.m */; };
+		93BFB23B181F66010017F469 /* SDBDResourceAggregator.m in Sources */ = {isa = PBXBuildFile; fileRef = 93BFB23A181F66010017F469 /* SDBDResourceAggregator.m */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		93BFB205181F512E0017F469 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 93BFB1DD181F512E0017F469 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 93BFB1E4181F512E0017F469;
-			remoteInfo = Soundboard;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
+		032FF7BE440142C09E84CA76 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
+		6BB6212BA771479FBE60A0D3 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		93BFB1E5181F512E0017F469 /* Soundboard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Soundboard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		93BFB1E8181F512E0017F469 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		93BFB1EA181F512E0017F469 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -53,26 +35,15 @@
 		93BFB1F7181F512E0017F469 /* SDBDAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SDBDAppDelegate.h; sourceTree = "<group>"; };
 		93BFB1F8181F512E0017F469 /* SDBDAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SDBDAppDelegate.m; sourceTree = "<group>"; };
 		93BFB1FA181F512E0017F469 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		93BFB200181F512E0017F469 /* SoundboardTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SoundboardTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		93BFB201181F512E0017F469 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		93BFB209181F512E0017F469 /* SoundboardTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SoundboardTests-Info.plist"; sourceTree = "<group>"; };
-		93BFB20B181F512E0017F469 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		93BFB20D181F512E0017F469 /* SoundboardTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SoundboardTests.m; sourceTree = "<group>"; };
 		93BFB217181F514F0017F469 /* SDBDCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDBDCollectionViewController.h; sourceTree = "<group>"; };
 		93BFB218181F514F0017F469 /* SDBDCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDBDCollectionViewController.m; sourceTree = "<group>"; };
 		93BFB21A181F53450017F469 /* SDBDSoundCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDBDSoundCell.h; sourceTree = "<group>"; };
 		93BFB21B181F53450017F469 /* SDBDSoundCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDBDSoundCell.m; sourceTree = "<group>"; };
 		93BFB21D181F535E0017F469 /* SDBDSound.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDBDSound.h; sourceTree = "<group>"; };
 		93BFB21E181F535E0017F469 /* SDBDSound.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDBDSound.m; sourceTree = "<group>"; };
-		93BFB22C181F5E710017F469 /* Coin.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Coin.wav; sourceTree = "<group>"; };
-		93BFB22D181F5E710017F469 /* Die.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Die.wav; sourceTree = "<group>"; };
-		93BFB22E181F5E710017F469 /* Pipe.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Pipe.wav; sourceTree = "<group>"; };
-		93BFB22F181F5E710017F469 /* Power up.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "Power up.wav"; sourceTree = "<group>"; };
-		93BFB230181F5E710017F469 /* Stage clear.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "Stage clear.wav"; sourceTree = "<group>"; };
-		93BFB236181F60D10017F469 /* SDBDSoundPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDBDSoundPlayer.h; sourceTree = "<group>"; };
-		93BFB237181F60D10017F469 /* SDBDSoundPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDBDSoundPlayer.m; sourceTree = "<group>"; };
-		93BFB239181F66010017F469 /* SDBDSoundAggregator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDBDSoundAggregator.h; sourceTree = "<group>"; };
-		93BFB23A181F66010017F469 /* SDBDSoundAggregator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDBDSoundAggregator.m; sourceTree = "<group>"; };
+		93BFB239181F66010017F469 /* SDBDResourceAggregator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDBDResourceAggregator.h; sourceTree = "<group>"; };
+		93BFB23A181F66010017F469 /* SDBDResourceAggregator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDBDResourceAggregator.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,16 +54,7 @@
 				93BFB1EB181F512E0017F469 /* CoreGraphics.framework in Frameworks */,
 				93BFB1ED181F512E0017F469 /* UIKit.framework in Frameworks */,
 				93BFB1E9181F512E0017F469 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		93BFB1FD181F512E0017F469 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				93BFB202181F512E0017F469 /* XCTest.framework in Frameworks */,
-				93BFB204181F512E0017F469 /* UIKit.framework in Frameworks */,
-				93BFB203181F512E0017F469 /* Foundation.framework in Frameworks */,
+				34FC3E86DBA5471D8706F2FE /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -103,9 +65,9 @@
 			isa = PBXGroup;
 			children = (
 				93BFB1EE181F512E0017F469 /* Soundboard */,
-				93BFB207181F512E0017F469 /* SoundboardTests */,
 				93BFB1E7181F512E0017F469 /* Frameworks */,
 				93BFB1E6181F512E0017F469 /* Products */,
+				032FF7BE440142C09E84CA76 /* Pods.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -113,7 +75,6 @@
 			isa = PBXGroup;
 			children = (
 				93BFB1E5181F512E0017F469 /* Soundboard.app */,
-				93BFB200181F512E0017F469 /* SoundboardTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -125,6 +86,7 @@
 				93BFB1EA181F512E0017F469 /* CoreGraphics.framework */,
 				93BFB1EC181F512E0017F469 /* UIKit.framework */,
 				93BFB201181F512E0017F469 /* XCTest.framework */,
+				6BB6212BA771479FBE60A0D3 /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -136,14 +98,12 @@
 				93BFB1F8181F512E0017F469 /* SDBDAppDelegate.m */,
 				93BFB217181F514F0017F469 /* SDBDCollectionViewController.h */,
 				93BFB218181F514F0017F469 /* SDBDCollectionViewController.m */,
+				93BFB239181F66010017F469 /* SDBDResourceAggregator.h */,
+				93BFB23A181F66010017F469 /* SDBDResourceAggregator.m */,
 				93BFB21D181F535E0017F469 /* SDBDSound.h */,
 				93BFB21E181F535E0017F469 /* SDBDSound.m */,
-				93BFB239181F66010017F469 /* SDBDSoundAggregator.h */,
-				93BFB23A181F66010017F469 /* SDBDSoundAggregator.m */,
 				93BFB21A181F53450017F469 /* SDBDSoundCell.h */,
 				93BFB21B181F53450017F469 /* SDBDSoundCell.m */,
-				93BFB236181F60D10017F469 /* SDBDSoundPlayer.h */,
-				93BFB237181F60D10017F469 /* SDBDSoundPlayer.m */,
 				93BFB1FA181F512E0017F469 /* Images.xcassets */,
 				93BFB1EF181F512E0017F469 /* Supporting Files */,
 			);
@@ -153,43 +113,12 @@
 		93BFB1EF181F512E0017F469 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				93BFB22B181F5E710017F469 /* Sounds */,
 				93BFB1F0181F512E0017F469 /* Soundboard-Info.plist */,
 				93BFB1F1181F512E0017F469 /* InfoPlist.strings */,
 				93BFB1F4181F512E0017F469 /* main.m */,
 				93BFB1F6181F512E0017F469 /* Soundboard-Prefix.pch */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		93BFB207181F512E0017F469 /* SoundboardTests */ = {
-			isa = PBXGroup;
-			children = (
-				93BFB20D181F512E0017F469 /* SoundboardTests.m */,
-				93BFB208181F512E0017F469 /* Supporting Files */,
-			);
-			path = SoundboardTests;
-			sourceTree = "<group>";
-		};
-		93BFB208181F512E0017F469 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				93BFB209181F512E0017F469 /* SoundboardTests-Info.plist */,
-				93BFB20A181F512E0017F469 /* InfoPlist.strings */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		93BFB22B181F5E710017F469 /* Sounds */ = {
-			isa = PBXGroup;
-			children = (
-				93BFB22C181F5E710017F469 /* Coin.wav */,
-				93BFB22D181F5E710017F469 /* Die.wav */,
-				93BFB22E181F5E710017F469 /* Pipe.wav */,
-				93BFB22F181F5E710017F469 /* Power up.wav */,
-				93BFB230181F5E710017F469 /* Stage clear.wav */,
-			);
-			path = Sounds;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -199,9 +128,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 93BFB211181F512E0017F469 /* Build configuration list for PBXNativeTarget "Soundboard" */;
 			buildPhases = (
+				141C77C1C52E4EAE8F4544F2 /* Check Pods Manifest.lock */,
 				93BFB1E1181F512E0017F469 /* Sources */,
 				93BFB1E2181F512E0017F469 /* Frameworks */,
 				93BFB1E3181F512E0017F469 /* Resources */,
+				D04DB2F03280456DBEB854DE /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -212,24 +143,6 @@
 			productReference = 93BFB1E5181F512E0017F469 /* Soundboard.app */;
 			productType = "com.apple.product-type.application";
 		};
-		93BFB1FF181F512E0017F469 /* SoundboardTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 93BFB214181F512E0017F469 /* Build configuration list for PBXNativeTarget "SoundboardTests" */;
-			buildPhases = (
-				93BFB1FC181F512E0017F469 /* Sources */,
-				93BFB1FD181F512E0017F469 /* Frameworks */,
-				93BFB1FE181F512E0017F469 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				93BFB206181F512E0017F469 /* PBXTargetDependency */,
-			);
-			name = SoundboardTests;
-			productName = SoundboardTests;
-			productReference = 93BFB200181F512E0017F469 /* SoundboardTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -239,11 +152,6 @@
 				CLASSPREFIX = SDBD;
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = "Bryan Irace";
-				TargetAttributes = {
-					93BFB1FF181F512E0017F469 = {
-						TestTargetID = 93BFB1E4181F512E0017F469;
-					};
-				};
 			};
 			buildConfigurationList = 93BFB1E0181F512E0017F469 /* Build configuration list for PBXProject "Soundboard" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -258,7 +166,6 @@
 			projectRoot = "";
 			targets = (
 				93BFB1E4181F512E0017F469 /* Soundboard */,
-				93BFB1FF181F512E0017F469 /* SoundboardTests */,
 			);
 		};
 /* End PBXProject section */
@@ -269,24 +176,44 @@
 			buildActionMask = 2147483647;
 			files = (
 				93BFB1F3181F512E0017F469 /* InfoPlist.strings in Resources */,
-				93BFB233181F5E710017F469 /* Pipe.wav in Resources */,
-				93BFB234181F5E710017F469 /* Power up.wav in Resources */,
-				93BFB232181F5E710017F469 /* Die.wav in Resources */,
-				93BFB231181F5E710017F469 /* Coin.wav in Resources */,
-				93BFB235181F5E710017F469 /* Stage clear.wav in Resources */,
 				93BFB1FB181F512E0017F469 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		93BFB1FE181F512E0017F469 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		141C77C1C52E4EAE8F4544F2 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				93BFB20C181F512E0017F469 /* InfoPlist.strings in Resources */,
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
 		};
-/* End PBXResourcesBuildPhase section */
+		D04DB2F03280456DBEB854DE /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		93BFB1E1181F512E0017F469 /* Sources */ = {
@@ -296,44 +223,19 @@
 				93BFB21C181F53460017F469 /* SDBDSoundCell.m in Sources */,
 				93BFB1F5181F512E0017F469 /* main.m in Sources */,
 				93BFB219181F514F0017F469 /* SDBDCollectionViewController.m in Sources */,
-				93BFB23B181F66010017F469 /* SDBDSoundAggregator.m in Sources */,
+				93BFB23B181F66010017F469 /* SDBDResourceAggregator.m in Sources */,
 				93BFB21F181F535E0017F469 /* SDBDSound.m in Sources */,
 				93BFB1F9181F512E0017F469 /* SDBDAppDelegate.m in Sources */,
-				93BFB238181F60D10017F469 /* SDBDSoundPlayer.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		93BFB1FC181F512E0017F469 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				93BFB20E181F512E0017F469 /* SoundboardTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		93BFB206181F512E0017F469 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 93BFB1E4181F512E0017F469 /* Soundboard */;
-			targetProxy = 93BFB205181F512E0017F469 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		93BFB1F1181F512E0017F469 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
 				93BFB1F2181F512E0017F469 /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		93BFB20A181F512E0017F469 /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				93BFB20B181F512E0017F469 /* en */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -417,6 +319,7 @@
 		};
 		93BFB212181F512E0017F469 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 032FF7BE440142C09E84CA76 /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -430,6 +333,7 @@
 		};
 		93BFB213181F512E0017F469 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 032FF7BE440142C09E84CA76 /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -438,48 +342,6 @@
 				INFOPLIST_FILE = "Soundboard/Soundboard-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
-			};
-			name = Release;
-		};
-		93BFB215181F512E0017F469 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Soundboard.app/Soundboard";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Soundboard/Soundboard-Prefix.pch";
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = "SoundboardTests/SoundboardTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = xctest;
-			};
-			name = Debug;
-		};
-		93BFB216181F512E0017F469 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Soundboard.app/Soundboard";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Soundboard/Soundboard-Prefix.pch";
-				INFOPLIST_FILE = "SoundboardTests/SoundboardTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = xctest;
 			};
 			name = Release;
 		};
@@ -502,14 +364,7 @@
 				93BFB213181F512E0017F469 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-		};
-		93BFB214181F512E0017F469 /* Build configuration list for PBXNativeTarget "SoundboardTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				93BFB215181F512E0017F469 /* Debug */,
-				93BFB216181F512E0017F469 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -8,10 +8,15 @@
 
 #import "SDBDSoundCell.h"
 
-static NSString * const SDBDSoundKeyPath = @"sound";
+static NSString * const SoundKeyPath = @"sound";
 static void * SDBDSoundCellKVOContext = &SDBDSoundCellKVOContext;
-static CGFloat SDBDDevicePixelHeight;
+static CGFloat CellAlpha = 1.0;
+static CGFloat CellHighlightedAlpha = 0.8;
+static CGFloat CellBackgroundAlpha = 0.7;
+static CGFloat CellBackgroundWhite = 1.0;
+static CGFloat CellBorderWhite = 0.5;
 
+static CGFloat DevicePixelHeight;
 
 @interface SDBDSoundCell()
 
@@ -28,12 +33,12 @@ static CGFloat SDBDDevicePixelHeight;
     if (self = [super initWithFrame:frame]) {
         static dispatch_once_t onceToken;
         dispatch_once(&onceToken, ^{
-            SDBDDevicePixelHeight = 1.0/[[UIScreen mainScreen] scale];
+            DevicePixelHeight = 1.0/[[UIScreen mainScreen] scale];
         });
         
-        self.backgroundColor = [UIColor colorWithWhite:1 alpha:0.7];
-        self.layer.borderColor = [UIColor colorWithWhite:0.5 alpha:0.7].CGColor;
-        self.layer.borderWidth = SDBDDevicePixelHeight;
+        self.backgroundColor = [UIColor colorWithWhite:CellBackgroundWhite alpha:CellBackgroundAlpha];
+        self.layer.borderColor = [UIColor colorWithWhite:CellBorderWhite alpha:CellBackgroundAlpha].CGColor;
+        self.layer.borderWidth = DevicePixelHeight;
         
         self.label = [[UILabel alloc] init];
         self.label.translatesAutoresizingMaskIntoConstraints = NO;
@@ -59,7 +64,7 @@ static CGFloat SDBDDevicePixelHeight;
         
         [self addConstraints:constraints];
         
-        [self addObserver:self forKeyPath:SDBDSoundKeyPath options:0 context:SDBDSoundCellKVOContext];
+        [self addObserver:self forKeyPath:SoundKeyPath options:0 context:SDBDSoundCellKVOContext];
     }
     
     return self;
@@ -69,10 +74,10 @@ static CGFloat SDBDDevicePixelHeight;
     [super setHighlighted:highlighted];
     
     if (highlighted) {
-        self.alpha = 0.8;
+        self.alpha = CellHighlightedAlpha;
     }
     else {
-        self.alpha = 1;
+        self.alpha = CellAlpha;
     }
 }
 
@@ -91,7 +96,7 @@ static CGFloat SDBDDevicePixelHeight;
 #pragma mark - NSObject
 
 - (void)dealloc {
-    [self removeObserver:self forKeyPath:SDBDSoundKeyPath context:SDBDSoundCellKVOContext];
+    [self removeObserver:self forKeyPath:SoundKeyPath context:SDBDSoundCellKVOContext];
 }
 
 @end

@@ -6,19 +6,12 @@
 //  Copyright (c) 2013 Bryan Irace. All rights reserved.
 //
 
-#import "SDBDSoundAggregator.h"
+#import "SDBDResourceAggregator.h"
 #import "SDBDSound.h"
 
-@implementation SDBDSoundAggregator
+@implementation SDBDResourceAggregator
 
-static NSArray *SDBDSoundAggregatorSupportedFileTypes;
-
-+ (NSArray *)soundsInBundle:(NSBundle *)bundle {
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
-        SDBDSoundAggregatorSupportedFileTypes = @[@"wav", @"mp3", @"aif"];
-    });
-    
++ (NSArray *)resourcesInBundle:(NSBundle *)bundle withFileExtensions:(NSArray *)extensions {
     NSString *directoryPath = [bundle resourcePath];
     NSError *error = nil;
     NSArray *directoryContents = [[NSFileManager defaultManager] contentsOfDirectoryAtPath:directoryPath error:&error];
@@ -34,7 +27,7 @@ static NSArray *SDBDSoundAggregatorSupportedFileTypes;
         NSString *fileName = [filePathComponents firstObject];
         NSString *fileType = [filePathComponents lastObject];
         
-        if ([SDBDSoundAggregatorSupportedFileTypes containsObject:fileType]) {
+        if ([extensions containsObject:fileType]) {
             NSString *fullFilePath = [bundle pathForResource:fileName ofType:fileType];
             
             [sounds addObject:[[SDBDSound alloc] initWithFilePath:fullFilePath name:fileName]];

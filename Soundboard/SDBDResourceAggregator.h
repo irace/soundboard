@@ -6,8 +6,8 @@
 //  Copyright (c) 2013 Bryan Irace. All rights reserved.
 //
 
-@interface SDBDSoundAggregator : NSObject
+@interface SDBDResourceAggregator : NSObject
 
-+ (NSArray *)soundsInBundle:(NSBundle *)bundle;
++ (NSArray *)resourcesInBundle:(NSBundle *)bundle withFileExtensions:(NSArray *)extensions;
 
 @end

@@ -8,7 +8,6 @@
 
 #import "SDBDAppDelegate.h"
 #import "SDBDCollectionViewController.h"
-#import "SDBDSoundPlayer.h"
 
 @implementation SDBDAppDelegate
 
@@ -19,8 +18,6 @@
                                       [[UICollectionViewFlowLayout alloc] init]];
     
     [self.window makeKeyAndVisible];
-    
-    [SDBDSoundPlayer sharedInstance].playsSoundsConcurrently = NO;
     
     return YES;
 }

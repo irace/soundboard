@@ -6,13 +6,15 @@
 //  Copyright (c) 2013 Bryan Irace. All rights reserved.
 //
 
+#import "BRYSoundEffectPlayer.h"
 #import "SDBDCollectionViewController.h"
 #import "SDBDSound.h"
-#import "SDBDSoundAggregator.h"
+#import "SDBDResourceAggregator.h"
 #import "SDBDSoundCell.h"
-#import "SDBDSoundPlayer.h"
 
-static NSString * const SDBDSoundCellIdentifier = @"SDBDSoundCellIdentifier";
+static CGFloat const CollectionLayoutMinLineSpacing = 15;
+static CGFloat const CollectionLayoutItemSize = 100;
+static NSString * const CellIdentifier = @"CellIdentifier";
 
 @interface SDBDCollectionViewController ()
 
@@ -26,11 +28,11 @@ static NSString * const SDBDSoundCellIdentifier = @"SDBDSoundCellIdentifier";
 
 - (id)init {
     UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc] init];
-    layout.minimumLineSpacing = 15;
-    layout.itemSize = CGSizeMake(100, 100);
+    layout.minimumLineSpacing = CollectionLayoutMinLineSpacing;
+    layout.itemSize = CGSizeMake(CollectionLayoutItemSize, CollectionLayoutItemSize);
     
     if (self = [super initWithCollectionViewLayout:layout]) {
-        self.sounds = [SDBDSoundAggregator soundsInBundle:[NSBundle mainBundle]];
+        self.sounds = [SDBDResourceAggregator resourcesInBundle:[NSBundle mainBundle] withFileExtensions:@[@"wav", @"mp3", @"aif"]];
     }
     
     return self;
@@ -47,9 +49,10 @@ static NSString * const SDBDSoundCellIdentifier = @"SDBDSoundCellIdentifier";
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.collectionView.contentInset = UIEdgeInsetsMake(CGRectGetHeight([UIApplication sharedApplication].statusBarFrame), 0, 0, 0);
+    [BRYSoundEffectPlayer sharedInstance].playsSoundsConcurrently = NO;
     
-    [self.collectionView registerClass:[SDBDSoundCell class] forCellWithReuseIdentifier:SDBDSoundCellIdentifier];
+    self.collectionView.contentInset = UIEdgeInsetsMake(CGRectGetHeight([UIApplication sharedApplication].statusBarFrame), 0, 0, 0);
+    [self.collectionView registerClass:[SDBDSoundCell class] forCellWithReuseIdentifier:CellIdentifier];
 }
 
 #pragma mark - UICollectionViewDelegate
@@ -57,7 +60,7 @@ static NSString * const SDBDSoundCellIdentifier = @"SDBDSoundCellIdentifier";
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
     SDBDSound *sound = self.sounds[indexPath.row];
     
-    [[SDBDSoundPlayer sharedInstance] playSound:sound.filePath];
+    [[BRYSoundEffectPlayer sharedInstance] playSound:sound.filePath];
 }
 
 #pragma mark - UICollectionViewDataSource
@@ -67,7 +70,7 @@ static NSString * const SDBDSoundCellIdentifier = @"SDBDSoundCellIdentifier";
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
-    SDBDSoundCell *cell = [self.collectionView dequeueReusableCellWithReuseIdentifier:SDBDSoundCellIdentifier forIndexPath:indexPath];
+    SDBDSoundCell *cell = [self.collectionView dequeueReusableCellWithReuseIdentifier:CellIdentifier forIndexPath:indexPath];
     cell.sound = self.sounds[indexPath.row];
 
     return cell;
