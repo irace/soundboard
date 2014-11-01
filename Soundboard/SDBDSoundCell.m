@@ -107,7 +107,7 @@ static CGFloat DevicePixelHeight;
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context {
     if (object == self && context == SDBDSoundCellKVOContext) {
         self.label.text = self.sound.name;
-        [self.contentView layoutIfNeeded];
+        [self.label layoutIfNeeded];
     }
     else {
         [super observeValueForKeyPath:keyPath ofObject:object change:change context:context];
