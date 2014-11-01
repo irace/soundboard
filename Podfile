@@ -1,1 +1,3 @@
-pod BRYSoundEffectPlayer
+source 'https://github.com/CocoaPods/Specs.git'
+
+pod 'BRYSoundEffectPlayer'
