@@ -42,6 +42,11 @@ static CGFloat DevicePixelHeight;
         
         self.label = [[UILabel alloc] init];
         self.label.translatesAutoresizingMaskIntoConstraints = NO;
+        self.label.numberOfLines = 0;
+        self.label.minimumScaleFactor = 0.5f;
+        self.label.adjustsFontSizeToFitWidth = YES;
+        self.label.textAlignment = NSTextAlignmentCenter;
+        self.label.lineBreakMode = NSLineBreakByTruncatingMiddle;
         [self.contentView addSubview:self.label];
         
         NSMutableArray *constraints = [[NSMutableArray alloc] init];
@@ -59,6 +64,22 @@ static CGFloat DevicePixelHeight;
                                                             relatedBy:NSLayoutRelationEqual
                                                                toItem:self.contentView
                                                             attribute:NSLayoutAttributeCenterY
+                                                           multiplier:1.0
+                                                             constant:0.0]];
+        
+        [constraints addObject:[NSLayoutConstraint constraintWithItem:self.label
+                                                            attribute:NSLayoutAttributeWidth
+                                                            relatedBy:NSLayoutRelationLessThanOrEqual
+                                                               toItem:self.contentView
+                                                            attribute:NSLayoutAttributeWidth
+                                                           multiplier:1.0
+                                                             constant:0.0]];
+        
+        [constraints addObject:[NSLayoutConstraint constraintWithItem:self.label
+                                                            attribute:NSLayoutAttributeHeight
+                                                            relatedBy:NSLayoutRelationLessThanOrEqual
+                                                               toItem:self.contentView
+                                                            attribute:NSLayoutAttributeHeight
                                                            multiplier:1.0
                                                              constant:0.0]];
         
@@ -86,7 +107,7 @@ static CGFloat DevicePixelHeight;
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context {
     if (object == self && context == SDBDSoundCellKVOContext) {
         self.label.text = self.sound.name;
-        [self.label sizeToFit];
+        [self.label layoutIfNeeded];
     }
     else {
         [super observeValueForKeyPath:keyPath ofObject:object change:change context:context];
